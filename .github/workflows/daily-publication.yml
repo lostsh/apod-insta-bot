@@ -1,9 +1,9 @@
 name: Daily Publication
 
-on: workflow_dispatch
-#  schedule:
-#    # every morning 8am
-#    - cron:  '0 8 * * *'
+on:
+  schedule:
+    # every morning 8am
+    - cron:  '0 8 * * *'
 
 jobs:
   publish:
