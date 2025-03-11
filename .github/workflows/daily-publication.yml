@@ -9,6 +9,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout files
+      uses: actions/checkout@v4
     - name: Publish
-      run: ls -alth; pwd; echo "Test secret access ${{ secrets.TEST }}"
+      run: ls -alth; pwd; node -v; echo "Test secret access ${{ secrets.TEST }}"
       #run: echo "node main.js ${{ secrets.NASA_TOKEN }} ${{ secrets.IG_TOKEN }}
