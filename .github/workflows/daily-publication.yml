@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Publish
-      run: echo "node main.js ${{ secrets.NASA_TOKEN }} ${{ secrets.IG_TOKEN }}
+      run: ls -alth; pwd; echo "Test secret access ${{ secrets.TEST }}"
+      #run: echo "node main.js ${{ secrets.NASA_TOKEN }} ${{ secrets.IG_TOKEN }}
