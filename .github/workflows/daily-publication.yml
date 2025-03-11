@@ -14,5 +14,5 @@ jobs:
     - name: Checking context
       run: ls -alth; pwd; node -v; echo "Test secret access ${{ secrets.TEST }}"
     - name: Publish
-      run: node test.js "coucouuuuu"
-      #run: node main.js ${{ secrets.NASA_TOKEN }} ${{ secrets.IG_TOKEN }}
+      #run: node test.js "coucouuuuu"
+      run: node main.js ${{ secrets.NASA_TOKEN }} ${{ secrets.IG_TOKEN }}
