@@ -9,3 +9,6 @@ This repo contain an Action that run daily, (using cron task) to run the node sc
 ```bash
 node main $(cat ns-secret.txt) $(cat ig-secret.txt)
 ```
+
+## TODO
+Reels avec whisper pour avoir plus de reco
