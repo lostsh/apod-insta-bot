@@ -38,7 +38,7 @@ async function main(nasa_token, insta_token){
     })
     .then(response => response.json())
     .then(response => response.id);
-    
+
     // Publishing (phase2: post conatiner)
     url = "https://graph.instagram.com/"
     +(ig_user_id+"/media_publish")
@@ -53,8 +53,14 @@ async function main(nasa_token, insta_token){
     .then(response => response.json());
 
     console.log(pub_status);
+    if("error" in pub_status){
+        return pub_status.error.code;
+    }else{
+       return 0;
+    }
     // TODO add interface and outputs status
     // TODO add the hashtags (checkout nasa api sometimes generate hashtags)
 }
 
-main(process.argv[2], process.argv[3]);
+main(process.argv[2], process.argv[3])
+.then(code => process.exit(code));
