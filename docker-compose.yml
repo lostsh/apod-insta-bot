@@ -1,9 +1,13 @@
 
 services:
-    main-app:
-        build: ./
+    publisher:
+        build: ./ig-poster
         ports:
             - "8080:3000"
-        volumes:
-            - ./:/usr/src/app
+        restart: always
+
+    web-cli:
+        build: ./interface
+        ports:
+            - "8000:3000"
         restart: always
