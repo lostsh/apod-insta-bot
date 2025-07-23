@@ -1,9 +1,0 @@
-#FROM node:16
-FROM alpine
-WORKDIR /usr/src/app
-#USER node
-RUN apk add nodejs
-#RUN npm install
-#EXPOSE 3000
-#CMD ["node", "./main.js"]
-CMD node main
