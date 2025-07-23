@@ -1,9 +1,0 @@
-
-services:
-    main-app:
-        build: ./
-        ports:
-            - "8080:3000"
-        volumes:
-            - ./:/usr/src/app
-        restart: always
