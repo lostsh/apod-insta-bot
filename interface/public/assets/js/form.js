@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const token =  document.querySelector("#token").value;
 
     // Send request
-    const url = "http://localhost:8000/publish" 
+    const url = "http://localhost:8080/publish"
     + "?picurl="+picurl+"&caption="+caption;
     const res = await fetch(url, {
         method: "POST",
