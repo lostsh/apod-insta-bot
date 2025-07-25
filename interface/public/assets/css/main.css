@@ -1,0 +1,58 @@
+:root{
+  --background-color: #f7f3f3;
+  --foreground-color: #0b0b0b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: 'Sans Serif';
+  font-size: large;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input, form textarea{
+  margin: 1vw 1vh;
+  padding: 1em 2em;
+
+  border: 1px solid var(--foreground-color);
+  background-color: var(--background-color);
+  
+  font-family: 'Sans Serif';
+  font-size: medium;
+  width: 40vw;
+}
+
+form textarea{
+  height: 10vh;
+}
+
+form button{
+  margin: 1vw 2vh;
+  padding: 1em 2em;
+  border: 1px solid var(--foreground-color);
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+form button:hover{
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+}
+
+::selection{
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+}
