@@ -1,17 +1,21 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const port = 3000;
 
-app.use(express.json())
+app.use(express.json());
 app.listen(port);
+
+app.use(cors({
+    origin: [ 'http://localhost:8000', 'http://localhost:3000']
+}));
 
 app.get('/', (req, res) => {
     res.send('<h1>Publishing API</h1><p>URL params: picurl & caption POST body (json): token</p>')
 })
 
 app.post('/publish', async (req, res) => {
-    console.log(req.body)
-    const token = req.body.token
+    const token = req.body.token;
     const pic_url = req.query.picurl;
     const caption = req.query.caption;
 
@@ -54,7 +58,5 @@ app.post('/publish', async (req, res) => {
     .then(response => response.json());
 
 
-    res.send({
-        'Publication status': pub_status
-    })
+    res.send(pub_status);
 })

@@ -2,7 +2,11 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+const API_INSTA_POSTER = process.env.IGPOSTER || "http://localhost:8080";
+app.use(cors({
+    origin: [ API_INSTA_POSTER, 'http://localhost:3000']
+}));
 
 const port = 3000;
 
