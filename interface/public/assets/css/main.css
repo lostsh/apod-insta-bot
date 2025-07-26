@@ -40,6 +40,11 @@ form textarea{
   height: 10vh;
 }
 
+form input:focus, form textarea:focus{
+  outline: 0;
+  border: 1px dotted var(--foreground-color);
+}
+
 form button{
   margin: 1vw 2vh;
   padding: 1em 2em;
