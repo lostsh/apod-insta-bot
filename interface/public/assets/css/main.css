@@ -44,6 +44,10 @@ form input:focus, form textarea:focus{
   outline: 0;
   border: 1px dotted var(--foreground-color);
 }
+form input:invalid, form textarea:invalid{
+  outline: 0;
+  border: 2px double var(--foreground-color);
+}
 
 form button{
   margin: 1vw 2vh;
