@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     const grid = document.querySelector("#ns-grid");
 
     //const url = "http://localhost:8090/lasts";
-    const url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&end_date=2025-07-28&start_date=2025-07-20";
+    const url = "http://localhost:3000/apod.json";
     const res = await fetch(url, {
         method: "GET",
         headers: {
@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         }
     })
     .then(response => response.json());
-
-    console.log(res);
 
     res.forEach(apod_item => {
         grid.appendChild(createApodItem(apod_item));
