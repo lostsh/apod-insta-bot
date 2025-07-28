@@ -20,10 +20,11 @@ main{
   font-size: large;
 }
 
-main div{
+main #social-container, #ig-container, #ns-container{
   width: 100%;
-  /*=================TO CHANGE================*/
-  border: 1px solid black;
+}
+#social-container{
+  border-bottom: 1px solid var(--foreground-color);
 }
 
 main #social-container{
@@ -83,4 +84,29 @@ form button:hover{
 ::selection{
   background-color: var(--foreground-color);
   color: var(--background-color);
+}
+
+
+#ns-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+.tile{
+  border: 1px solid var(--foreground-color);
+  color: var(--background-color);
+  margin: 5px;
+}
+.tile h4{
+  text-align: center;
+}
+.tile span{
+  float: right;
+  bottom: 0;
+  margin-right: 4px;
+  font-size: small;
+}
+.tile p{
+  font-size: x-small;
+  display: none;
 }

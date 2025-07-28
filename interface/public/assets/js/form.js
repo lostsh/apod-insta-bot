@@ -27,5 +27,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelector("#result").textContent = status;
   });
 });
-
-

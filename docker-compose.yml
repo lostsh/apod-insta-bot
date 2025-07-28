@@ -5,6 +5,12 @@ services:
         ports:
             - "8080:3000"
         restart: always
+    
+    nasa-apod:
+        build: ./ns-api
+        ports:
+            - "8090:3000"
+        restart: always
 
     web-cli:
         build: ./interface
