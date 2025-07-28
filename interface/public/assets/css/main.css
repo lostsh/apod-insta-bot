@@ -91,6 +91,9 @@ form button:hover{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
+
+  max-height: 85%;
+  overflow: scroll;
 }
 .tile{
   border: 1px solid var(--foreground-color);

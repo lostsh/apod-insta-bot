@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
     const grid = document.querySelector("#ns-grid");
 
-    //const url = "http://localhost:8090/lasts";
-    const url = "http://localhost:3000/apod.json";
+    const url = "http://localhost:8090/lasts";
     const res = await fetch(url, {
         method: "GET",
         headers: {
