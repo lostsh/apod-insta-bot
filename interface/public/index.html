@@ -9,13 +9,29 @@
 </head>
 
 <body>
-  <form>
-    <input type="url" name="picurl" id="picurl" value="https://example.org" required="true">
-    <textarea type="text" name="caption" id="caption" required="true">this is a pic caption</textarea>
-    <input type="text" name="token" id="token" value="very secret token" required="true">
-    <button id="send" type="submit">OK</button>
-  </form>
-  <p id="result"></p>
+  <main>
+    <div id="social-container">
+
+      <div id="ig-container">
+        <h2>Instagram Posting System</h2>
+        <form>
+          <input type="url" name="picurl" id="picurl" value="https://example.org" required="true">
+          <textarea type="text" name="caption" id="caption" required="true">this is a pic caption</textarea>
+          <input type="text" name="token" id="token" value="very secret token" required="true">
+          <button id="send" type="submit">OK</button>
+        </form>
+        <p id="result"></p>
+      </div>
+
+      <div id="ns-container">
+        <h2>Nasa APOD Explorer</h2>
+        <div id="ns-grid"></div>
+      </div>
+    </div>
+
+    <div id="ai-container">This is AI related stuff</div>
+
+  </main>
 </body>
 
 </html>
