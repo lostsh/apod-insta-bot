@@ -8,4 +8,4 @@ USER user
 WORKDIR /home/user/
 COPY . .
 
-CMD node main $(cat ns-secret.txt) $(cat ig3-secret.txt)
+CMD node main $(cat ns-secret.txt) $(cat ig-secret.txt)
